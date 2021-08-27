@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Greeshma2903/Article-preview-component/)
-- Live Site URL: [Add live site URL here](https://article-preview-component-two-olive.vercel.app/)
+- Solution URL: [Solution URL](https://github.com/Greeshma2903/Article-preview-component/)
+- Live Site URL: [Demo](https://article-preview-component-two-olive.vercel.app/)
 
 ## My process
 
