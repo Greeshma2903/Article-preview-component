@@ -1,0 +1,253 @@
+/* =========================
+    font
+============================ */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&display=swap");
+
+/* =========================
+    root elements
+============================ */
+:root {
+  /* primary colours */
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-dark-blue: hsl(214, 17%, 51%);
+  --Grayish-blue: hsl(212, 23%, 69%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+
+  /* font */
+  --f-family: "Manrope", sans-serif;
+  --f-size-head: 16px;
+  --f-size-para: 13px;
+}
+
+/* =======================
+    styling
+========================== */
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--f-family);
+  font-size: var(--f-size-para);
+  background-color: var(--Light-grayish-blue);
+
+  min-height: 100vh; /* min-height makes page responsive in mobile views (instead of crushing the page ht) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+/* -----------article----------- */
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 3rem; /* for mobile */
+  max-width: 400px; /* this combo of max-width & width: for responsiveness in mobile*/
+  width: 80%;
+
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 50px var(--Grayish-blue), 5px 5px 50px #fff;
+  position: relative;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.article-image {
+  background: url("./images/drawers.jpg"); /* better option over adding in html */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 230px;
+}
+
+.article-content {
+  padding: 1.6rem 2.3rem 1rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  color: var(--Very-Dark-Grayish-Blue);
+  letter-spacing: 0.8px;
+}
+
+.article-para {
+  padding: 1rem 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--Desaturated-dark-blue);
+}
+
+/* -------------profile------------ */
+.profile {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.profile-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 80%;
+}
+
+.profile-details {
+  margin-left: 1rem;
+  position: relative;
+}
+
+.profile-details .name {
+  color: var(--Very-Dark-Grayish-Blue);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.profile-details .date {
+  color: var(--Desaturated-dark-blue);
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+/* -------------share-button--------------- */
+button.share {
+  border: none;
+  border-radius: 100%;
+  padding: 8px;
+  background-color: var(--Light-grayish-blue);
+  color: var(--Desaturated-dark-blue);
+
+  position: absolute;
+  right: 2rem;
+
+  box-shadow: 0px 0px 4px var(--Grayish-blue);
+  z-index: 99;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+button.show {
+  background-color: var(--Grayish-blue);
+  color: #fff;
+}
+
+/* -------------popop------------- */
+#popup {
+  background-color: var(--Very-Dark-Grayish-Blue);
+  color: #fff;
+  width: 100%;
+  height: 72px;
+  padding: 1.2rem 2.3rem;
+  border-radius: 0 0 10px 10px;
+
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+
+  transition: background-color 0.3s ease-in-out;
+}
+
+#popup.show {
+  display: flex;
+}
+
+#popup p,
+#popup i {
+  padding-right: 1rem;
+  letter-spacing: 2px;
+}
+
+#popup p {
+  color: var(--Grayish-blue);
+  font-size: 1rem;
+}
+
+#popup i {
+  color: var(--Light-grayish-blue);
+  font-size: 1.4rem;
+}
+
+#popup i:hover {
+  color: aquamarine;
+}
+
+/* ----------footer------- */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+}
+
+/*==================== media queries =====================*/
+@media screen and (min-width: 1000px) {
+  main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+  }
+
+  article {
+    flex-direction: row;
+    max-width: 810px;
+    width: 100%;
+  }
+
+  .article-image {
+    width: 100%;
+    height: auto;
+    background-position: left;
+  }
+
+  .article-content {
+    padding: 2rem 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .article-para {
+    font-size: 15px;
+  }
+
+  #popup {
+    justify-content: center;
+
+    width: 270px;
+    padding: 10px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--Grayish-blue);
+
+    bottom: 90px;
+    right: -87px;
+    z-index: 2;
+  }
+
+  #popup::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--Very-Dark-Grayish-Blue);
+
+    position: absolute;
+    bottom: -10px;
+
+    transform: rotate(45deg);
+  }
+}
