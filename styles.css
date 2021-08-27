@@ -75,7 +75,7 @@ article {
   padding: 1.6rem 2.3rem 1rem;
 }
 
-h2 {
+h1 {
   font-size: 1.1rem;
   color: var(--Very-Dark-Grayish-Blue);
   letter-spacing: 0.8px;
@@ -219,7 +219,7 @@ footer {
     padding: 2rem 2.2rem;
   }
 
-  h2 {
+  h1 {
     font-size: 1.3rem;
   }
 
